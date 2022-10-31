@@ -1,21 +1,37 @@
 package ru.netology.javacore;
 
-import com.google.gson.Gson;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class TodoServer {
-    //...
+    private final int port;
+    private final TodoProcessor processor;
 
-    public TodoServer(int port, Todos todos) {
-        //...
+    public TodoServer(int port, TodoProcessor processor) {
+        this.port = port;
+        this.processor = processor;
     }
 
     public void start() throws IOException {
-        System.out.println("Starting server at " + port + "...");
-        //...
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.println("Server started!");
+
+            while (true) {
+                try (Socket clientSocket = serverSocket.accept();
+                     PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                     BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))
+                ) {
+                    System.out.println("New connection accepted, port " + clientSocket.getPort() + ".");
+
+                    String request = in.readLine();
+                    String response = processor.process(request);
+                    out.println(response);
+
+                    System.out.println("Request:\n" + request);
+                    System.out.println("Response:\n" + response);
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,9 @@
+{ "type": "ADD", "task": "Первая" }
+{ "type": "ADD", "task": "Вторая" }
+{ "type": "ADD", "task": "Третья" }
+{ "type": "ADD", "task": "Четвертая" }
+{ "type": "ADD", "task": "Пятая" }
+{ "type": "ADD", "task": "Шестая" }
+{ "type": "ADD", "task": "Седьмая" }
+{ "type": "ADD", "task": "Восьмая" }
+{ "type": "REMOVE", "task": "Первая" }

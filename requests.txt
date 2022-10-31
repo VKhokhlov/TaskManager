@@ -7,3 +7,21 @@
 { "type": "ADD", "task": "Седьмая" }
 { "type": "ADD", "task": "Восьмая" }
 { "type": "REMOVE", "task": "Первая" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+{ "type": "RESTORE" }
+#{ "type": "ADD", "task": "Первая" }
+#{ "type": "ADD", "task": "Вторая" }
+#{ "type": "REMOVE", "task": "Первая" }
+#{ "type": "ADD", "task": "Третья" }
+#{ "type": "RESTORE" }
+#{ "type": "RESTORE" }
+#{ "type": "RESTORE" }
+#{ "type": "RESTORE" }
+#{ "type": "RESTORE" }

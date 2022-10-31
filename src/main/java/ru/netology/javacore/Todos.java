@@ -1,6 +1,7 @@
 package ru.netology.javacore;
 
-import java.util.*;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Todos {
     private final Set<String> tasks;
